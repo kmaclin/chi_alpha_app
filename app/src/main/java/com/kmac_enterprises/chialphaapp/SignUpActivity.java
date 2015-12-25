@@ -83,12 +83,10 @@ public class SignUpActivity extends AppCompatActivity {
                     cancel = true;
                 }
 
-                if (!TextUtils.isEmpty(password_text.getText().toString()) && !isPasswordValid(password_text.getText().toString(),
-                        retype_password_text.getText().toString()) && !TextUtils.isEmpty(retype_password_text.getText().toString())) {
+                if (!TextUtils.isEmpty(password_text.getText().toString()) &&
+                        !isPasswordValid(password_text, retype_password_text, focusView) &&
+                !TextUtils.isEmpty(retype_password_text.getText().toString())) {
                     Log.e("chialpha", "bad password");
-                    password_text.setError(getString(R.string.error_invalid_password));
-                    //retype_password_text.setError(getString(R.string.error_password_mismatch));
-                    focusView = password_text;
                     cancel = true;
                 }
 
@@ -116,13 +114,12 @@ public class SignUpActivity extends AppCompatActivity {
                     // perform the user login attempt.
                     Person user = new User(fn_text.getText().toString(), ln_text.getText().toString(),
                             email_text.getText().toString(), campus_text.getText().toString());
+
                     Bridge.addMember(user, retype_password_text.getText().toString().hashCode());
-                    Log.e("chialphaapp", "added member successfully");
                     Bridge.setCurrentUser(user);
-                    Log.e("chialphaapp", "set current user successfully");
+
                     Intent afterSignUp = new Intent(SignUpActivity.this, MainActivity.class);
                     startActivity(afterSignUp);
-                    Log.e("chialphaapp", "started new activity successfully");
                     finish();
                 }
             }
@@ -146,15 +143,23 @@ public class SignUpActivity extends AppCompatActivity {
         return true;
     }
 
-    private boolean isPasswordValid(String password, String retyped_password) {
+    private boolean isPasswordValid(EditText password, EditText retyped_password, View focusView) {
         //TODO: Replace this with your own logic
-        if (password.length() > 7 && password.equals(retyped_password)) {
+        if (password.getText().toString().length() <= 7) {
+            password.setError(getString(R.string.error_invalid_password));
+            focusView = password;
+            return true;
+        }else if (retyped_password.getText().toString().length() <= 7) {
+            retyped_password.setError(getString(R.string.error_invalid_password));
+            focusView = retyped_password;
+            return true;
+        } else if (!password.getText().toString().equals(retyped_password.getText().toString())) {
+            retyped_password.setError(getString(R.string.error_password_mismatch));
+            focusView = retyped_password;
             return true;
         }
+
         return false;
     }
 
-    public void onClick(View v) {
-
-    }
 }

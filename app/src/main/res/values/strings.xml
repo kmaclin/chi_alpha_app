@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">#ChristLife</string>
+    <string name="app_name">XAcademy</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -26,7 +26,8 @@
     <string name="signup_password">Password</string>
     <string name="signup_retype_password">Verify Password</string>
     <string name="register">Register</string>
-    <string name="campus_name">Campus</string>
+    <string name="signup_campus">Campus</string>
     <string name="error_email_in_system">Email is used by another user.</string>
+    <string name="action_signUp">Sign Up</string>
 
 </resources>
