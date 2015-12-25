@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/signup_firstname"/>
+
+        <EditText
+            android:id="@+id/fn_editor"
+            android:layout_width="128dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="32dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/first_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/signup_lastname"/>
+
+        <EditText
+            android:id="@+id/ln_editor"
+            android:layout_width="128dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="32dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/last_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/email_signup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="74dp"
+            android:text="@string/signup_email"/>
+
+        <EditText
+            android:id="@+id/email_editor"
+            android:layout_width="128dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/email_signup_text" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/password_signup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="46dp"
+            android:text="@string/signup_password"/>
+
+        <EditText
+            android:id="@+id/password_editor"
+            android:layout_width="128dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="18dp"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/password_signup_text"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/retype_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="0dp"
+            android:text="@string/signup_retype_password"/>
+
+        <EditText
+            android:id="@+id/retype_password_editor"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_width="128dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="24dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/retype_password"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/campus_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="46dp"
+            android:text="@string/campus_name"/>
+
+        <EditText
+            android:id="@+id/campus_editor"
+            android:layout_width="128dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="28dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/campus_signup"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/signUp_button"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="@string/register"/>
+
+</LinearLayout>
